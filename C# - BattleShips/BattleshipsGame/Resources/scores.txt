@@ -1,0 +1,12 @@
+Moves:		Time:
+
+42		25 seconds
+
+52		53 seconds
+
+23		17 seconds67		61 seconds
+
+67		61 seconds
+
+69		57 seconds
+

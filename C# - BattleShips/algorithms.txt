@@ -1,0 +1,121 @@
+AI Levels:
+Level 1: pc randomly choosing tiles from the board once it hit a boat, next move will be chosen around the hit boat.
+
+	r.Next(maxX)
+	r.Next(maxY)
+	int level1(){
+		//keep going if you have hit a boat twice following the same direction
+		if(keepgoing == true){
+
+			if(direction==below){
+
+				if(y!= 1){
+
+					array[pastX][pastY+1] = already;
+					//check if you found 2 consecutive tiles
+					if(array[pastX][pastY+1] == populated){
+						keepgoing = true;
+						direction = below;
+						pastY = pastY+1;
+					upper == checked;
+				}
+			}
+
+			if(direction==above){
+
+			}
+
+			if(direction==right){
+
+			}
+
+			if(direction==left){
+
+			}
+		}
+
+		//check if past move was successful, then
+	if(pastMove == true){
+
+			//check lower tile to pastMove
+			if(lower != checked && y!= 10){
+				array[pastX][pastY+1] = already;
+				//check if you found 2 consecutive tiles
+				if(array[pastX][pastY+1] == populated){
+					keepgoing = true;
+					direction = down;
+					pastY = pastY+1;
+					lower == checked;
+				}
+			}
+
+			//check lower tile to pastMove
+			else if(upper != checked && y!= 1){
+				array[pastX][pastY-1] = already;
+				//check if you found 2 consecutive tiles
+				if(array[pastX][pastY-1] == populated){
+					keepgoing = true;
+					direction = up;
+					pastY = pastY-1;
+					upper = checked;
+				}
+			}
+
+			//check right tile to pastMove
+			else if(right != checked && x!=10){
+				array[pastX+1][pastY] = already;
+				//check if you found 2 consecutive tiles
+				if(array[pastX+1][pastY] == populated){
+					keepgoing = true;
+					direction = right;
+					pastX = pastX+1;
+					right = checked;
+				}
+			}
+			//check right tile to pastMove
+			else if(left != checked && x!=1){
+				array[pastX-1][pastY] = already;
+				//check if you found 2 consecutive tiles
+				if(array[pastX-1][pastY] == populated){
+					keepgoing = true;
+					direction = left;
+					pastX = pastX-1;
+					left = checked;
+				}
+			}
+	}
+
+		//generate random move
+		do{
+			random choose i and j;
+		 	if(array[i][j] == already){
+				bool = true;
+			}
+		}while(bool)
+		array[i][j] = shot;
+		if(array[i][j] == populated){
+			pastMove = true;
+		 	pastX = i;
+			pastY = j;
+		}
+		return 0;
+	}
+
+Level 2: pc follows the most optimised pattern for hitting a boat, then next move will be chosen around the hit boat for(i=1; i<11; i++){
+		for(j=2; j<11; j+2){
+			board[i][j] = hit;
+			if(j < 9){
+				j = 2;
+				continue;
+}
+
+			if(j < 10){
+				j = 1;
+				continue;
+}
+}
+
+Level 3: heat map with next move will be chosen around the hit boat.
+	- Guess
+	- Recalibrate
+	- Repeat
